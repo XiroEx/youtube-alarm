@@ -1,8 +1,10 @@
+
+require('dotenv').config();
 const { exec } = require('child_process');
 const loudness = require('loudness');
-const id = `PLhL9Od1u_vP-9qSV9g3GAQ_35vwf1M4fm`;
-const KEY = 'AIzaSyAj29rGQXrWsmjJ1J9LoVkXxH0TXxTkWRQ';
 const {google} = require('googleapis');
+const id = process.env.ID; //Youtube API ID
+const KEY = process.env.KEY; //Youtube API KEY
 
 (function openYoutube() {
     //! Set Volume
